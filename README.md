@@ -7,10 +7,11 @@ The dynamic process inferred for time steps 4000-5000 on the training set is ill
     <img src="figures/combined_best_pred_4K_5K.gif" alt="dynamic graph" title="dynamic graph" />
 </div>
 
-Video:
+Video at time steps 4000-5000:
 <div style="text-align: center;">
     <a href="https://www.youtube.com/watch?v=X0Y3kXcCx-s">
         <img src="https://img.youtube.com/vi/X0Y3kXcCx-s/0.jpg" alt="Video Title" />
     </a>
 </div>
 
+Video of all test dataset:
