@@ -4,7 +4,7 @@ Industrial graph structure learning
 The dynamic process inferred for time steps 4000-5000 on the training set is illustrated in the following animation. For a higher resolution video, click the link below.
 
 <div style="text-align: center;">
-    <img src="figures/combined_best_pred_4K_5K.gif" alt="dynamic graph" title="dynamic graph" />
+    <img src="gifs/combined_best_pred_1K.gif" alt="dynamic graph" title="dynamic graph" />
 </div>
 
 Video at time steps 4000-5000:
