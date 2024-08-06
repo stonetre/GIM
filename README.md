@@ -1,5 +1,5 @@
 # GIM
-Industrial graph structure learning
+This project is mainly used for graph structure learning of real industrial processes. 
 ## Multiple dataset support
 The code supports multi-dataset training, which is particularly useful when real industrial engineering data is scarce. Researchers can collect datasets that are similar to industrial processes, construct standardized datasets, and train models directly using the provided code. The code utilizes a node mask matrix to manage the varying numbers of sensors across different datasets. However, a hyperparameter specifying the maximum number of nodes needs to be determined for all datasets to ensure consistency across the training process.
 
