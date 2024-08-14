@@ -174,41 +174,6 @@ def edge_accuracy(preds, target, edges_mask):
 def sum_except_batch(x):
     return x.reshape(x.size(0), -1).sum(-1)
 
-
-# def gaussian_KL(q_mu, q_sigma, p_mu, p_sigma, node_mask):
-#     """Computes the KL distance between two normal distributions.
-
-#         Args:
-#             q_mu: Mean of distribution q.
-#             q_sigma: Standard deviation of distribution q.
-#             p_mu: Mean of distribution p.
-#             p_sigma: Standard deviation of distribution p.
-#         Returns:
-#             The KL distance, summed over all dimensions except the batch dim.
-#         """
-#     return sum_except_batch(
-#             (
-#                 torch.log(p_sigma / (q_sigma + 1e-8) + 1e-8)
-#                 + 0.5 * (q_sigma**2 + (q_mu - p_mu)**2) / (p_sigma**2)
-#                 - 0.5
-#             ) * node_mask
-#         )
-
-# def gaussian_KL(q_mu, q_sigma, node_mask):
-#     """Computes the KL distance between two normal distributions.
-
-#         Args:
-#             q_mu: Mean of distribution q.
-#             q_sigma: Standard deviation of distribution q.
-#             p_mu: Mean of distribution p.
-#             p_sigma: Standard deviation of distribution p.
-#         Returns:
-#             The KL distance, summed over all dimensions except the batch dim.
-#         """
-#     return sum_except_batch(
-#             (-0.5 * (1 + q_sigma - q_mu.pow(2) - q_sigma.exp())/q_mu.size(1))
-#         )
-
 def gaussian_KL(p_mu, p_sigma, node_mask, mask_rev):
     cach = 1 + p_sigma - p_mu.pow(2) - torch.exp(p_sigma)
     cach = torch.einsum('abcd,ab->abcd', cach.permute(0,2,1,3), mask_rev).permute(0,2,1,3)
@@ -330,14 +295,6 @@ def get_act_fn(act):
     else:
         raise ValueError(act)
     return act_fn
-
-# def repara_trick(x_mu, x_sigma, kl_mask):
-#     eps = torch.randn_like(x_mu).to(x_mu.device)
-#     std = torch.exp(0.5 * x_sigma)
-#     noise =  std*eps 
-#     noise = torch.einsum('abcd,ab->abcd', noise.permute(0,2,1,3), kl_mask).permute(0,2,1,3) 
-#     x = x_mu + noise
-#     return x
 
 
 def repara_trick(x_mu, x_sigma, kl_mask):
