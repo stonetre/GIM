@@ -15,6 +15,13 @@ node_description.csv is used to describe the text information of each sensor. Th
 
 graph.csv contains the edge indices of the graph. The indices point from the sensors in the first column to the sensors in the second column. Note that the order of the node indices needs to be consistent with the order in node_properties.csv. 
 
+The simulation dataset is generated using the provided code. 
+'''
+python data/generate_dataset_multi.py
+'''
+
+For water treatment datasets can be downloaded from the [website] (https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/).
+
 ## Test dataset results
 The dynamic process inferred for time steps 4000-5000 on the training set is illustrated in the following animation. For a higher resolution video, click the link below.
 
