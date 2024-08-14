@@ -1,0 +1,16 @@
+﻿Name,Types,Location,Description
+FIT101,flow sensor.,P1,raw water system.
+LIT101,liquid level sensor. ,P1,raw water system.
+FIT201,flow sensor.,P2,from raw water system to ultrafiltration system.
+DPIT301,pressure sensor.,P3,ultrafiltration system.
+FIT301,flow sensor.,P3,from ultrafiltration system to dechlorination system.
+LIT301,liquid level sensor. ,P3,ultrafiltration system.
+FIT401,flow sensor.,P4,from dechlorination system to RO system.
+LIT401,liquid level sensor. ,P4,dechlorination system.
+FIT501,flow sensor.,P5,RO system.
+FIT502,flow sensor.,P5,RO system.
+FIT503,flow sensor.,P5,RO system.
+FIT504,flow sensor.,P5,RO system.
+PIT501,pressure sensor.,P5,RO system.
+PIT502,pressure sensor.,P5,RO system.
+PIT503,pressure sensor.,P5,RO system.
