@@ -29,8 +29,7 @@ def main(args):
     args.cuda = not args.no_cuda and torch.cuda.is_available()
     device = torch.device("cuda" if args.cuda else "cpu")
     args.device = device
-
-    # seed_everything(args.seed)
+    seed_everything(args.seed)
 
     exp_utils.create_folders(args)
 
