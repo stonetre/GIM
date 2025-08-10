@@ -5,7 +5,6 @@ import torch
 import matplotlib.pyplot as plt
 from datetime import datetime
 
-# Folders
 def create_folders(args):
     try:
         os.makedirs('outputs')
