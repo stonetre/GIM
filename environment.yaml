@@ -1,7 +1,6 @@
 - networkx==3.3
 - python==3.12.3
 - pytorch==2.2.2
-- causal-conv1d==1.2.0
 - copent==0.5.5
 - sentence-transformers==3.0.1
 - torch-cluster==1.6.3
