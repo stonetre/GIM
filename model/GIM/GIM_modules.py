@@ -645,7 +645,6 @@ class Node_encoder(nn.Module):
         else:
             z_x = x_mu
         
-        # z_x = x_mu
 
         if nodes_mask is not None:
             z_x = torch.einsum('abcd,ab->abcd', z_x.permute(0,2,1,3), nodes_mask).permute(0,2,1,3)
