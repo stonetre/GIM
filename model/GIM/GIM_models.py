@@ -80,10 +80,6 @@ class GIM(torch.nn.Module):
 
         if self.gsl_use_prior_learner:
             loss_kl_g_prior = kl_categorical(prob, prob_prior, edges_mask, nodes_mask)
-        
-        # Decoder.
-        # mask = (torch.rand_like(nodes_mask) > 0.2).to(torch.float32) 
-        # mask = mask.to(nodes_mask.device)
 
         batch_size, nodes = nodes_mask.size()
         k = self.sib_k 
