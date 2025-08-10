@@ -19,7 +19,7 @@ def train(args, loader, epoch, model, nodes_dist, scheduler, optimizer, gradnorm
 
     for batch_idx, data in enumerate(loader):
 
-        x = data['nodes_timeseries'].permute(0,3,2,1).to(args.device)  # [batch, nodes, features, timesteps]
+        x = data['nodes_timeseries'].permute(0,3,2,1).to(args.device)  
         h = data['node_types'].permute(0,3,2,1).to(args.device)
         y = data['target'].permute(0,3,2,1).to(args.device)
         g_target = data['real_adj_1d'].to(args.device)
