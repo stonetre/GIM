@@ -11,7 +11,7 @@ DATA_WITH_GRAPH: Specify whether the dataset has a graph structure. The length o
 DATA_WITH_DESCRIP: Specify whether the dataset has node description. The length of the list should be the same as DATASETS.
 
 Example:
-# DATASETS = ['sim_springs5','swat2015']
+# DATASETS = ['XFM_polyester_esterification_2021']
 # FILEFORMAT = ['npy','csv']
 # DATA_WITH_GRAPH = [True, False]
 # DATA_WITH_DESCRIP = [False, True]
@@ -20,7 +20,7 @@ If each dataset does not have a pre-specified reference graph structure, the dat
 a variety of structure inference methods to pre-build a reference graph structure from the time series.
 '''
 
-DATASETS = ['sim_springs5']
+DATASETS = ['XFM_polyester_esterification_2021']
 FILEFORMAT = ['npy']
 DATA_WITH_GRAPH = [True]
 DATA_WITH_DESCRIP = [False]
@@ -41,13 +41,13 @@ parser.add_argument('--train_percent', type=float, default=0.7)
 parser.add_argument('--valid_percent', type=float, default=0.1)
 parser.add_argument('--test_percent', type=float, default=0.2)
 parser.add_argument('--timeseries_downsample', type=int, default=1)
-parser.add_argument('--datadir', type=str, default='data/sim/sim_springs5', help='')
+parser.add_argument('--datadir', type=str, default='data/XFM_polyester_esterification_2021', help='')
 parser.add_argument('--datasets', type=list, default=DATASETS, help='set on the top of this script')
 parser.add_argument('--file_format', type=list, default=FILEFORMAT)
 parser.add_argument('--has_graph', type=list, default=DATA_WITH_GRAPH)
 parser.add_argument('--has_node_description', type=list, default=DATA_WITH_DESCRIP)
-parser.add_argument('--slide_window_size', type=int, default=30)
-parser.add_argument('--label_window_size', type=int, default=19)
+parser.add_argument('--slide_window_size', type=int, default=120)
+parser.add_argument('--label_window_size', type=int, default=20)
 parser.add_argument('--slide_window_step', type=int, default=1)
 parser.add_argument('--batch_size', type=int, default=200)  
 parser.add_argument('--num_workers', type=int, default=0)
@@ -119,3 +119,4 @@ print(args)
 
 if __name__ == '__main__':
     main(args)
+
