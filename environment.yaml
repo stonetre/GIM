@@ -3,7 +3,6 @@
 - pytorch==2.2.2
 - causal-conv1d==1.2.0
 - copent==0.5.5
-- mamba-ssm==1.2.0.post1
 - sentence-transformers==3.0.1
 - torch-cluster==1.6.3
 - torch-geometric==2.5.3
