@@ -9,13 +9,7 @@ from modules.datafile_preprocess import prepare_dataset
 
 
 class ProcessedDataset(Dataset):
-    """
-    Post-Processing of Each Sample in the Dataset.
-    参数：
-    - data: dict, 包含所有数据的字典。
-    - normalize: bool, 是否对节点属性进行独立样本的归一化。
 
-    """
     def __init__(self, data, sample_normalize=False, normalize_method= 'std'):
 
         self.data = data
@@ -270,5 +264,6 @@ if __name__ == '__main__':
 
     dataloaders = retrieve_dataloaders(args, force_download=False)
     data_dummy = next(iter(dataloaders['train']))
+
 
     print(data_dummy['nodes_timeseries'].shape)
